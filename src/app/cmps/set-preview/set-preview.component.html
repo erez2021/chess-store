@@ -1,0 +1,11 @@
+<div class="set-card" *ngIf="set" (click)="showDetails()">
+    <div class="img-section">
+        <img [src]="set.img" class="set-img">
+        <div *ngIf="!set.inStock" class="stock"><h2>OUT OF STOCK</h2></div>
+</div>
+<p>{{set.name}}</p>
+<div class="sale-line flex">
+<h4>${{set.price}}</h4>
+<h4 *ngIf="set.onSale" class="sale">SALE!</h4>
+</div>
+</div>
