@@ -1,1 +1,17 @@
+<div class="main-layout home-page">
+<div class="main-layout">
+<img class="homepage-img main-layout" src="https://cdn11.bigcommerce.com/s-5p6k1/images/stencil/original/carousel/108/metal-chess-pieces-rotating-banner-1920x500__31388.jpg?c=2" alt="" srcset="">
+</div>
+<div class="quote main-layout">
+<h1>“When you see a good move, look for a better one.”   Emanuel Lasker</h1>
+</div>
+<h2>Find your favorite chess set</h2>
+</div>
+<div class="top-section main-layout flex-space-evenly">
+   
+<app-filter (onSetFilter)="onSetFilter($event)"></app-filter>
+
+<app-sort [sets]="sets$|async"></app-sort>
+
+</div>
 <app-set-list [sets]="sets$|async"></app-set-list>

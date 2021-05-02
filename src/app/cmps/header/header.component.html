@@ -1,1 +1,16 @@
-<p>header works!</p>
+<div class="header">
+    <nav class="main-layout flex-with-space">
+        <a routerLink="" style="text-decoration: none;">
+            <h2>CHESSTORE</h2>
+        </a>
+
+        <div class="cart-logo flex-no-space" >
+        <h2 *ngIf="!user; else helloUser" class="signup-link" [routerLink]="['signup']">SIGN-UP</h2>
+           <ng-template #helloUser>    <h2 class="signup-link"  [routerLink]="['signup']">Hello {{user.fullName}}</h2></ng-template>
+        <img src="../../../assets//icons/redheart.png" [routerLink]="['saved']" class="heart-btn">
+            <img [routerLink]="['cart']"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAAB0dHTCwsK7u7t9fX3V1dVWVlb6+vrl5eX5+fk+Pj7BwcHy8vIjIyPZ2dlnZ2c2Njbo6Oirq6tKSkqFhYWxsbHNzc0ODg6KioqYmJh7e3tLS0uRkZGhoaErKytjY2MZGRkNDQ04ODhtbW0fHx8uLi5CQkJTU1NI+OWuAAAG60lEQVR4nO2dbV/iMAzAGY8D5ElAGIpsioff/xOeOnVL1ifdkgx/+d+ru9FrAk2bJmnX6SiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKUmJxWI4Qy/v1UFqsxoi7kZmXw0RatkaY/LMo+M6dtHRNkDoUjKI0lpavNgunglH0cPUjdeDRMBpJS1iXi0/D6CgtYk1WXg2jW2kZ6/Hg13ArLWM9Hv0aPs2khazFzK9hdCMtZD3Wf36Ydg5eDU/SItZluPGpeN2G+M54CFn0oIZ9aQEJ+FuGaALuqK7eEA2gGfbK3RoTY6jhla+IJiYnoOFAWh4CoCFepMUh4M5miOtzl58zwT4c7f0LQ+xb/QJCnptXsBPDAFWxIt5KaEiyIC9BF9PigT8q0Dw7Cg2RIRauqS28SsiexDFGhli4pgKG+EqhoN01HZuloOSRRsMz6CQrHpwsctBBlEKxGuI9t4J7GgXtrim7IS6JNOzsQTeFaxoSvGoUsvwQXBZWxYOMWUOyvRvaI46/H3hzHc0yp1IQG2Lv+8GdWRIqEjINJzCnURjipN8jBQ2enkPGmsAVcUPXEQJN1oSxTOuKSAz8ZikTmFbXlBYUQTlQ9gW74oqaoi92QdkX3COu/A0aASb8TqS1EjKGCKtDUtK+0IrIY4gT2ClxSQ/sjMcQUVZo7G9RBzhv07lPZY6gz8zfoBYS6YsX1nGDQocc6QvmLuM56I4jfYFcNvKiM/70BTR9oihbCesekQw4akhdtg/Y84icLtsHMdwj0q+I0GWbM7hR0DWlN0TospFF2Uowu6YojsdRhc28R9yxz2w4dEgXFcqBLhtPlQs0RGrXFOZl74l7y2E1RGSGhFG2EqwrInLZmI5CwE5pV0Tosk39DRqBs8QNfpv0LlsOo2uKliaus2XW9EXzoLJ6ruM66OgX5R5xBHo6E/YEYdsjzjLQ05quJ4S1xK1pJFy2D6wlbk2TgH64Quzv2ErcmgaeGeBx2XKsJW7Nglw2zrpkJtdUKl3ZYdsjwkokipJSO1BDKkOEvXC5bDnQIX6h6QSNFJKSUivINaWxENQJSR9WWHIJr6APjihbmQz0TuKazmAZHZ/LlgNdU5JpTsxly2HYIyKXjfsuB4ZgjZzL9oG1xK0xBHKxEPISNxRl4z8OSO4zQpeNK8pWgtw1zcD/L3EXB0zNNu6aoqmM12XLgXvEf/1muUGF1QIK8lY+i9yJw3oWiNtly+HUkNtly2E8C8RTP1dh55esKaTubXLd69YsMoOUcTbtCimIvX865K6oYDqzxpO8NzPkUJDoRGwgDMu+zGJfEBOvilOpabTE4n7vF/SXvLbkkpjZ8LgdDAbbJBmd5vP5Kj0m73//IdvkeH5+a34abZPte/uk37Zrfvrd1Xz/9PZnPh384rvfJZdT9rTf7+er5V0L7xIb4ntduz8q5r3douYbySXCwOI1qpIGD7KZ6RzxVGJbb8N2SV9guWvPMlWxh0htxEuzgFFgGNV+2ealHeY4c13pOvJXMbnufsnoK/P9xC8OCQMOgHgut2nBgjFyS+gzJt99sPKX++FZvorTce55m0vfPO2X0HnKJWT7Jbu16GQBIjqyNkE3TImaYsCtypEjMea7/j1H9ALDIAntP2LgJWGCq6LBCi+bafUfLXu8SfWTqwdD7EfQEs9IlKf1LO7Es8rYtVQzVS5fSm7jt9nnBkcpecu9yqDrKqLXr2KC2TN8YElvIm+vcGDw6BXb56OJoqQHql62VKDb9UBuhNhOH42ynf2R8RQBWgzLkftb+yNW4LEyOGNCEY3bKJT3ADMmtHDugq9v4L4VHtODIhojgnAmhhX/MGEg5rnBQCL8neDva5zv4UiGZylgqLklGsLfKXE8++QGfCQFz+AIFtMQ7itggggu3AGjFCZB4ZIqpqHj6h/krhirbVwH7WFkSyy7hibDsrGh4JlxyY7hZ8rRAOQOirltOC1T/Ao36Im5Paw5KumBt41ycUXsZH8NRuyYpubmCfrY9nOcVwoE5N6hhUWMNo+L8eJQCb5Z4qYVTbLjbjxeVyI/KadOkLAdrH2DF3g7r2SAPyyRb50Kw0IEIjVtX4Rlua2bn0kW0lz2hYTuNwnmOAozA168JP0WhoA79Z33Nge8Ak363aD+0i/nBt0QqkFIFyr4B5pnIvQVc7ThpUTuuL7X4cLuDySllz8A10vMAgrcXeO8LW+zsSYvwtJ/9gSkvA1+MTZPicvAYHVsvg58JT2LAvrV3+En1RTDahZy354f8JMeXPy7P9zxLOCE9dDKNyvHu0N6mU6nl/PjrzZ0w3V389Z8mh577ahQUBRFURRFURRFURRFURRFURRFURRFURQW/gPvh1Oy7iAftgAAAABJRU5ErkJggg=="
+                alt="" srcset="">
+        </div>
+
+    </nav>
+</div>

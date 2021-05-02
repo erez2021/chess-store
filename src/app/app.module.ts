@@ -9,6 +9,13 @@ import { SetListComponent } from './cmps/set-list/set-list.component';
 import { SetPreviewComponent } from './cmps/set-preview/set-preview.component';
 import { FooterComponent } from './cmps/footer/footer.component';
 import { SetDetailsComponent } from './cmps/set-details/set-details.component';
+import { ChatComponent } from './cmps/chat/chat.component';
+import { FormsModule } from '@angular/forms';
+import { FilterComponent } from './cmps/filter/filter.component';
+import { SortComponent } from './cmps/sort/sort.component';
+import { CartComponent } from './cmps/cart/cart.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { SavedSetsComponent } from './pages/saved-sets/saved-sets.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +25,18 @@ import { SetDetailsComponent } from './cmps/set-details/set-details.component';
     SetListComponent,
     SetPreviewComponent,
     FooterComponent,
-    SetDetailsComponent
+    SetDetailsComponent,
+    ChatComponent,
+    FilterComponent,
+    SortComponent,
+    CartComponent,
+    SignupComponent,
+    SavedSetsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

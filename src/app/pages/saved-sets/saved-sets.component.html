@@ -1,0 +1,22 @@
+<div class="saved-sets-container main-layout" *ngIf="this.items !== [] && this.items.length; else msg"  >
+<h2 class="title">My Saved Items</h2>
+<div *ngFor="let item of items; index as idx">
+    <div class="saved-items flex-space-evenly">
+        <img [src]="item.img" alt="" srcset="">
+        <div>
+   <h2>{{item.name}}</h2> 
+</div>
+   <h3>price: ${{item.price}}</h3> 
+   <button (click)="removeFromSaved(item._id)" class="remove-btn">Remove</button>
+</div>
+</div>
+</div>
+<ng-template #msg >
+    <div class="no-saved-items">  
+    <h2>No Saved Items</h2>
+</div>
+</ng-template>
+<div class="button">
+    <button *ngIf="this.items !== [] && this.items.length" (click)="removeSaved()" class="remove-all-btn">Remove All</button>
+<button class="back-btn" [routerLink]="['']">Back</button>
+</div>

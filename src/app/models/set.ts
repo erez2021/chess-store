@@ -6,4 +6,5 @@ export interface Set {
     img: string
     inStock: boolean
     onSale: boolean
+    isSaved: boolean
 }

@@ -1,0 +1,13 @@
+.sort-btn{
+    background-color:white;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    width: 70px;
+    padding: 3px;
+    &:active{
+        background-color: black;
+        color: white;
+    }
+  
+}

@@ -1,1 +1,27 @@
-<p>set-details works!</p>
+<div class="set-details main-layout flex-with-space">
+   <div class="img-container">
+       <img [src]="set.img" alt="" srcset="">
+   </div>
+   <div class="details-container">
+<h2>{{set.name}}</h2>
+<h3 *ngIf="!isFullDesc; else desc">{{getDesc}}</h3>
+<ng-template #desc> <h3>{{set.description}}</h3></ng-template>
+
+<button *ngIf="set.description.length > 100" (click)="toggleDesc()" class="read-btn">Read <span>{{moreOrLess}}</span>...</button> 
+<h3 *ngIf="set.inStock" class="stock">In Stock!</h3>
+
+<div class="market-price flex-no-space">
+<h3>Market Price: </h3><h3 class="full-price"> ${{fullPrice}}</h3>
+</div>
+<h3>Our Price: ${{set.price}}</h3>
+<div>
+<button class="cart-btn" (click)="addToCart(set)">Add To Cart</button>
+</div>
+<div *ngIf="isModal===true">
+    <h4>Adding to cart..</h4>
+</div>
+<div>
+<button [routerLink]="['']" class="back">Back</button>
+</div>
+</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="signup flex-vertical">
+    <button class="back-btn" [routerLink]="['']">Back</button>
+    <h1>SIGN-UP</h1>
+<form  (submit)="signup()">
+    <div>
+    <label for="name">Full Name </label>
+    <input type="text" name="name"   [(ngModel)]="user.fullName">
+</div>  <div>
+    <label for="password">Password </label>
+    <input type="text" name="password"   [(ngModel)]="user.password">
+</div>
+    <div class="signup-btn-container">
+    <button class="signup-btn">Sign-Up</button>
+</div>
+    </form>
+</div>

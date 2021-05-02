@@ -1,0 +1,39 @@
+.chat-container{
+    z-index: 5;
+        height: 450px;
+        width: 300px;
+        position: fixed;
+        right: 10px;
+        bottom: 70px;
+        background-color:rgb(229, 238, 238);
+        border: 1px solid black;
+        border-radius: 10px;
+       
+    }
+
+    .chat-table{
+        margin: 0 auto;
+    }
+
+    .close-chat{
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        color: white;
+        background-color: black;
+        border: none;
+        cursor: pointer;
+        font-size: large;
+    }
+
+    input{
+        padding: 3px;
+        border-radius: 20px;
+        width: 200px;
+    }
+
+    .send-btn{
+        color: white;
+        background-color: black;
+        margin-left: 5px;
+    }

@@ -2,11 +2,11 @@
     height: 320px;
     width: 300px;
     border: 1px solid lightgray;
-    cursor: pointer;
+ 
     margin: 0 auto;
     text-align: center;
     color: rgb(102, 83, 83);
-    box-shadow: 0px 0px 2px 2px #958d8d57;
+    box-shadow: 0px 0px 1px 1px #958d8d57;
     background-color: ghostwhite;
     &:hover{
         opacity: 0.9;
@@ -16,11 +16,10 @@
   .stock{
       width: 300px;
       height: 80px;
-      z-index: 1;
-      top: 70px;;
+      top: 70px;
      position: absolute;
-      background-color: red;
-      opacity: 0.8;
+      background-color: rgb(214, 80, 80);
+      opacity: 0.7;
     
   }
 
@@ -37,12 +36,26 @@
       margin-top: 10px;
       width: 250px;
       height: 200px;
-    
+      cursor: pointer;
   }
 
- 
+ .set-name{
+   text-decoration: none;
+   font-weight: bold;
+ }
 
-  
+ .sale-line{
+   position: relative;
+ }
+
+  .save-img{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    transform: rotate(90deg);
+    bottom: 15px;
+    right: 15px;
+  }
 
   .sale {
     margin-left: 15px;
@@ -85,4 +98,22 @@
     0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
     50% { background-color: #FF0000; box-shadow: 0 0 10px #FF0000; }
     100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  }
+
+  @media (max-width: 1080px) {
+    .set-card {
+      width: 270px;
+      height: 280px;
+    }
+    .set-img{
+      width: 220px;
+      height: 160px;
+    }
+    .stock{
+      width: 270px;
+      height: 60px;
+      top: 40px;
+    }
+  }
+  @media (max-width: 880px) {
   }

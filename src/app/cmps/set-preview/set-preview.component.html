@@ -1,11 +1,13 @@
-<div class="set-card" *ngIf="set" (click)="showDetails()">
+
+<div class="set-card" *ngIf="set" >
     <div class="img-section">
-        <img [src]="set.img" class="set-img">
+        <img [src]="set.img" class="set-img" [routerLink]="['/',set._id]">
         <div *ngIf="!set.inStock" class="stock"><h2>OUT OF STOCK</h2></div>
 </div>
-<p>{{set.name}}</p>
+<p class="set-name" >{{set.name}}</p>
 <div class="sale-line flex">
 <h4>${{set.price}}</h4>
 <h4 *ngIf="set.onSale" class="sale">SALE!</h4>
+<img [src]="togglePic" (click)="saveSet(set._id)" class="save-img">
 </div>
 </div>

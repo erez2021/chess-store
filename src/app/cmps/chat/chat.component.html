@@ -1,0 +1,15 @@
+
+<button (click)="toggleChat()" class="chat-btn"> 💬 </button>
+<div class="chat-container" *ngIf="chatOpen">
+    <table class="chat-table">
+        <tr>
+            <td>What's your name?</td>
+        </tr>
+<tr *ngFor="let massage of massages; index as idx">
+<td>{{massage}}</td>
+</tr>
+<input type="text" [(ngModel)]="userMsg" name="name">
+<button (click)="sendMsg()" class="send-btn">send</button>
+    </table>
+<button (click)="closeChat()" class="close-chat">X</button>
+</div>

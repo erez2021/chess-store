@@ -1,0 +1,26 @@
+<div class="cart-container main-layout">
+    <div *ngFor="let item of items; index as idx">
+        <div class="cart-items flex-space-evenly">
+            <img [src]="item.img" alt="" srcset="">
+            <div>
+       <h2>{{item.name}}</h2> 
+    </div>
+       <h3>price: ${{item.price}}</h3> 
+       <button (click)="removeFromCart(item._id)" class="remove-btn">Remove</button>
+      <div class="line"></div>
+    </div>
+    </div>
+    <div class="total-price" *ngIf="totalPrice > 0">
+    <h2>TOTAL: ${{totalPrice | number:'1.0-3'}}</h2>
+  
+    <button (click)="clearCart()" class="clear-btn">Clear Cart</button>
+
+    <button class="buy-more" [routerLink]="['']">Buy More</button>
+
+</div>
+    <div *ngIf="totalPrice < 1" class="empty-cart">
+    <h2>No Items At Your Cart  </h2>
+        <button class="purchase-btn" [routerLink]="['']">Click Me To Purchase! </button>
+  
+</div>
+</div>
