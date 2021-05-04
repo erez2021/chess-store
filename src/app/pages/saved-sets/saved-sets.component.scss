@@ -50,3 +50,13 @@ img{
 .saved-items{
     margin-top: 20px;
 }
+
+@media (max-width: 540px) {
+    img{
+        width: 150px;
+        height: 130px;
+    }
+    h2{
+        font-size: large;
+    }
+}

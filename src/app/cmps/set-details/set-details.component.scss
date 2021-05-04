@@ -5,6 +5,8 @@
 img{
     width: 600px;
     height: 450px;
+    max-width: 100%;
+    height: auto;
 }
 
 .market-price{
@@ -50,4 +52,17 @@ h2{
 .read-btn{
     color: white;
     background-color:black;
+}
+
+@media (max-width:660px) {
+    .details-container{
+        margin-left: 5px;
+        h2,h3{
+        font-size: small;
+        }
+        .cart-btn{
+            width: 150px;
+            height: 50px;
+        }
+    }
 }

@@ -4,4 +4,9 @@
     gap: 20px;
   
 }
+@media (max-width: 540px){
+    .card-container{
+        gap: 5px;
+    }
+}
 

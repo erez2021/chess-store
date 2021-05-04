@@ -36,3 +36,17 @@ h2{
     width: 45px;
     margin-right: 20px;
 }
+
+@media (max-width: 540px){
+    h2{
+        font-size: medium;
+    }
+    a{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    img{
+        margin-right: 5px;
+    }
+ 
+}

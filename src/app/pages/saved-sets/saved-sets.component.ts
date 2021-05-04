@@ -9,7 +9,7 @@ import {Set} from '../../models/set'
 })
 export class SavedSetsComponent implements OnInit {
 
-items: Set[]
+items: Array<object>= []
   constructor(private setService: SetService) { }
 
   ngOnInit(): void {
@@ -22,6 +22,6 @@ items: Set[]
  }
  removeSaved() {
    this.items = []
-   localStorage.setItem('savedSets', JSON.stringify(this.items))
+  this.setService.saveItemsToStorage(this.items)
  }
 }

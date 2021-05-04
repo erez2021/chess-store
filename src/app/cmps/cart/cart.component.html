@@ -1,4 +1,5 @@
-<div class="cart-container main-layout">
+<div class="cart-container main-layout" >
+    <div *ngIf="items && items.length; else msg" >
     <div *ngFor="let item of items; index as idx">
         <div class="cart-items flex-space-evenly">
             <img [src]="item.img" alt="" srcset="">
@@ -16,11 +17,13 @@
     <button (click)="clearCart()" class="clear-btn">Clear Cart</button>
 
     <button class="buy-more" [routerLink]="['']">Buy More</button>
-
 </div>
-    <div *ngIf="totalPrice < 1" class="empty-cart">
+</div>
+<ng-template #msg >
+    <div class="empty-cart">
     <h2>No Items At Your Cart  </h2>
         <button class="purchase-btn" [routerLink]="['']">Click Me To Purchase! </button>
   
 </div>
+</ng-template>
 </div>

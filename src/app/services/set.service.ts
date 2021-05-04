@@ -175,19 +175,22 @@ subscription: Subscription
     return newUser
   }
    
+
   saveSet(setId) {
-    const idx = this.savedSets.findIndex(set=> set._id === setId)
-    if (idx !== -1) {this.savedSets.splice(idx, 1)
+    var savedSets = JSON.parse(localStorage.getItem('savedSets'))
+    if (!savedSets || !savedSets.length) savedSets = []
+    const idx = savedSets.findIndex(set => set._id === setId)
+    if (idx !== -1) {savedSets.splice(idx, 1)
     }else {
     const currSet$ = this.getSetById(setId)
     this.subscription = currSet$.subscribe(data =>{
       this.currSet = data
     })
-    this.savedSets.push(this.currSet)
-    console.log(this.savedSets);
+    savedSets.push(this.currSet)
+    console.log(savedSets);
 
   }
-  localStorage.setItem('savedSets', JSON.stringify(this.savedSets))
+  localStorage.setItem('savedSets', JSON.stringify(savedSets))
   }
 
 removeFromCart(itemId: string){

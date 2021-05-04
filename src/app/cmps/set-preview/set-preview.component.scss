@@ -115,5 +115,24 @@
       top: 40px;
     }
   }
-  @media (max-width: 880px) {
+  @media (max-width: 540px) {
+    .set-card {
+      width: 190px;
+      height: 230px;
+    }
+    .set-img{
+      width: 180px;
+      height: 130px;
+    }
+    .set-name{
+      margin: 5px;
+    }
+    .stock{
+      width: 200px;
+      height: 60px;
+      top: 40px;
+    }
+    .save-img{
+      right: 5px;
   }
+}

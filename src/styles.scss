@@ -63,13 +63,13 @@ body{
     background-size: cover;
 }
 
-@media (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
     .main-layout {
       width: 880px;
     }
   }
 
-@media (max-width: 780px) {
+@media (max-width: 880px) {
     .main-layout {
       width: 680px;
     }
@@ -77,6 +77,14 @@ body{
 
 @media (max-width: 540px) {
     .main-layout {
-      width: 500px;
+      width: 400px;
+    }
+    h1{
+        font-size: large
+    }
+}
+@media (max-width: 380px) {
+    .main-layout {
+      width: 350px;
     }
   }

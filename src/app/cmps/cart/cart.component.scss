@@ -56,3 +56,19 @@ img{
 }
 
 
+@media (max-width: 540px) {
+    img{
+        width: 150px;
+        height: 130px;
+    }
+    h1,h2,h3{
+        font-size: medium;
+        margin-left: 5px;
+    }
+    h3{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
